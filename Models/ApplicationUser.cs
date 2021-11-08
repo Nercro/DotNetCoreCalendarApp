@@ -8,6 +8,6 @@ namespace CalendarApop.Models
 {
 	public class ApplicationUser : IdentityUser
 	{
-
+		public virtual ICollection<CalendarEvent> CalendarEvents { get; set; }
 	}
 }
