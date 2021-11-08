@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "36FQAou6sbOg7EpuW4TpZBXPyiiY8cMv77dQupIQElOYmXSih+VWzAZv/fPTJEoOs72mbknetAf8b1tzckUEZA==",
+  "dgSpecHash": "HyZiQ3PIDdsAZv5dKNqGTZZezsL/JMmlHneKNTNEinnJWm46EM3vDJNlLcQ7ZoykIlrk2BDH6IaSU/y0eSpeUg==",
   "success": true,
-  "projectFilePath": "D:\\CS Projekti\\Calendar\\CalendarAppRepo\\CalendarApop\\CalendarApop.csproj",
+  "projectFilePath": "D:\\CS Projekti\\Calendar\\CalendarAppRepo\\DotNetCoreCalendarApp\\CalendarApop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nercro\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.21\\microsoft.aspnetcore.cryptography.internal.3.1.21.nupkg.sha512",
     "C:\\Users\\Nercro\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.21\\microsoft.aspnetcore.cryptography.keyderivation.3.1.21.nupkg.sha512",

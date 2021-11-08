@@ -18,5 +18,8 @@ namespace CalendarApop.Data
 		{
 			base.OnModelCreating(builder);
 		}
+
+		public DbSet<CalendarEvent> CalendarEvents { get; set; }
+		public DbSet<Location> Locations { get; set; }
 	}
 }
