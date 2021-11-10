@@ -1,4 +1,5 @@
-﻿using CalendarApop.Models;
+﻿using CalendarApop.Data;
+using CalendarApop.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,14 +13,17 @@ namespace CalendarApop.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
+		private readonly IDataAccessLayer _idal;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, IDataAccessLayer idal)
 		{
 			_logger = logger;
+			_idal = idal;
 		}
 
 		public IActionResult Index()
 		{
+			var myEvent = _idal.GetCalendarEvent(1);
 			return View();
 		}
 

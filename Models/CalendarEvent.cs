@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,6 +19,35 @@ namespace CalendarApop.Models
 
 		public virtual Location Location {get; set;}
 		public virtual ApplicationUser User { get; set; }
+
+
+		public CalendarEvent()
+		{
+
+		}
+
+		public CalendarEvent(IFormCollection form, Location location)
+		{
+			EventId = int.Parse(form["Id"]);
+			Name = form["Name"];
+			Description = form["Description"];
+			StartTime = DateTime.Parse(form["StartTime"]);
+			EndTime = DateTime.Parse(form["EndTime"]);
+			IsFullDay = bool.Parse(form["IsFullDay"]);
+			Location = location;
+
+		}
+
+		public void UpdateCalendarEvent(IFormCollection form, Location location)
+		{
+			EventId = int.Parse(form["Id"]);
+			Name = form["Name"];
+			Description = form["Description"];
+			StartTime = DateTime.Parse(form["StartTime"]);
+			EndTime = DateTime.Parse(form["EndTime"]);
+			IsFullDay = bool.Parse(form["IsFullDay"]);
+			Location = location;
+		}
 
 	}
 }

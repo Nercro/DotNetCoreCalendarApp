@@ -33,6 +33,8 @@ namespace CalendarApop
 					Configuration.GetConnectionString("DefaultConnection")));
 			services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
 				.AddEntityFrameworkStores<ApplicationDbContext>();
+
+			services.AddScoped<IDataAccessLayer, DataAccessLayer>();
 			services.AddControllersWithViews();
 			services.AddRazorPages();
 		}
